@@ -1,0 +1,214 @@
+/* Estilos de texto */
+.poppins-thin {
+    font-family: "Poppins", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+}
+
+.poppins-extralight {
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+}
+
+.poppins-light {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+p,
+.poppins-regular {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+button, 
+.poppins-medium {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+a, h2,
+.poppins-semibold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+h1,
+.poppins-bold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.poppins-extrabold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+}
+
+.poppins-black {
+    font-family: "Poppins", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+}
+
+.poppins-thin-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 100;
+    font-style: italic;
+}
+
+.poppins-extralight-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+    font-style: italic;
+}
+
+.poppins-light-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: italic;
+}
+
+.poppins-regular-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.poppins-medium-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: italic;
+}
+
+.poppins-semibold-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: italic;
+}
+
+.poppins-bold-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.poppins-extrabold-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-style: italic;
+}
+
+.poppins-black-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 900;
+    font-style: italic;
+}
+
+/* Estilos generales */
+body {
+    background-color: #9d75eb;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 30px 0px;
+}
+
+#container {
+    box-shadow: 2px 2px 30px blueviolet;
+    width: 80%;
+    background: #f3eefc;
+    margin: auto;
+    border-radius: 20px;
+    padding: 20px 30px 30px 30px;
+}
+
+h1, h2 {
+    color: blueviolet;
+}
+
+p {
+    line-height: 1.5;
+}
+
+a {
+    color: rgb(109, 10, 190);
+}
+
+#img-web {
+    border-radius: 10px;
+    border: 10px solid blueviolet;
+    width: 50vw;
+}
+
+#start-button, #trivia-buttons button {
+    background-color: blueviolet;
+    border-style: none;
+    box-shadow: 1px 3px 5px rgb(92, 9, 160);
+    color: white;
+    width: 30%;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+#start-button:hover, #answers button:hover, #trivia-buttons button:hover {
+    background-color: rgb(109, 10, 190);
+    cursor: pointer;
+}
+
+#start-container {
+    margin-top: 30px;
+    border: solid 2px blueviolet;
+    border-radius: 10px;
+    padding: 20px 10px 40px 10px;
+}	
+
+#answers{
+    display: flex;
+    flex-direction: column;
+}
+
+#answers button {
+    margin: 10px 0px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: blueviolet;
+    border-style: none;
+    color: white;
+    box-shadow: 1px 3px 5px rgb(92, 9, 160);
+}
+
+#trivia-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* Para ocultar Trivia, resultados y seccion principal*/
+.hidden {
+    display: none;
+}
+
+/* Estilos responsive */
+@media (max-width: 768px) {
+    #img-web {
+        width: 90%;
+    }
+    #container {
+        width: 70%;
+    }
+    #start-button, #trivia-buttons button {
+        width: 90%;
+    }
+    #trivia-buttons {
+        display: block;
+    }
+    #trivia-buttons button {
+        margin: 10px;
+    }
+}

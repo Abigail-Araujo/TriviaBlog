@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trivia</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="container">
+        <main>
+            <section id="main-content">
+                <h1 id="title">Diseño web</h1>
+                <img id="img-web" src="https://ecdisis.com/wp-content/uploads/2021/01/1-que-es-diseno-web-ecdisis.webp"
+                    alt="Pantallas de diferentes tamaños con modelo de página web de marketing">
+                <p id="description" style="margin-top: 30px; margin-bottom: 25px;">El diseño web es una actividad
+                    creativa enfocada en
+                    realizar
+                    la parte visual de entornos y materiales digitales. Se encarga de layouts e interfaces de
+                    plataformas
+                    digitales como un sitio web o una app y realiza una configuración visible y funcional para el
+                    usuario al
+                    distribuir y conceptualizar diversos elementos.</p>
+                <a id="link" href="https://ecdisis.com/que-es-diseno-web/" target="_blank">Descubre más sobre el diseño
+                    web aquí</a>
+                <div id="start-container">
+                    <h2>Pon a prueba tus conocimientos sobre el diseño web</h2>
+                    <button id="start-button">
+                        Comenzar Trivia
+                    </button>
+                </div>
+            </section>
+            <section id="trivia-content" class="hidden">
+                <div id="trivia">
+                    <h1 id="question-title">Pregunta 1</h1>
+                    <p>Selecciona una respuesta</p>
+                    <div id="answers">
+                        <button class="answer">Respuesta 1</button>
+                        <button class="answer">Respuesta 2</button>
+                        <button class="answer">Respuesta 3</button>
+                    </div>
+                </div>
+                <div id="results" class="hidden">
+                    <h1>Resultados</h1>
+                    <p>Respuestas correctas:</p>
+                    <h2 id="score"></h2>
+                    <div id="results-answers">
+                    </div>
+                </div>
+                <div id="trivia-buttons">
+                    <button id="restart">Reiniciar</button>
+                    <button id="home">Volver al inicio</button>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <p style="margin-top: 40px;">Esta página fue desarrollada por <a style="text-decoration: none;"
+                    target="_blank" href="https://github.com/Abigail-Araujo">Abigail Araujo</a></p>
+        </footer>
+    </div>
+    <script src="trivia.js"></script>
+</body>
+
+</html>
