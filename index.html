@@ -16,6 +16,7 @@
 <body>
     <div id="container">
         <main>
+            <!-- main-content (blog content) -->
             <section id="main-content">
                 <h1 id="title">Diseño web</h1>
                 <img id="img-web" src="https://ecdisis.com/wp-content/uploads/2021/01/1-que-es-diseno-web-ecdisis.webp"
@@ -37,7 +38,9 @@
                     </button>
                 </div>
             </section>
+            <!-- trivia-content (trivia content (trivia or results) and trivia-buttons) -->
             <section id="trivia-content" class="hidden">
+                <!-- trivia (question and answers) -->
                 <div id="trivia">
                     <h1 id="question-title">Pregunta 1</h1>
                     <p>Selecciona una respuesta</p>
@@ -47,13 +50,16 @@
                         <button class="answer">Respuesta 3</button>
                     </div>
                 </div>
+                <!-- results (score and result answers) -->
                 <div id="results" class="hidden">
                     <h1>Resultados</h1>
                     <p>Respuestas correctas:</p>
                     <h2 id="score"></h2>
                     <div id="results-answers">
+                        <!-- TO DO: add result answers -->
                     </div>
                 </div>
+                <!-- trivia-buttons (restart and home buttons) -->
                 <div id="trivia-buttons">
                     <button id="restart">Reiniciar</button>
                     <button id="home">Volver al inicio</button>
@@ -66,6 +72,50 @@
         </footer>
     </div>
     <script src="trivia.js"></script>
+    <noscript>
+        <style>
+            #container {
+                display: none;
+            }
+
+            body {
+                background-color: #f3f3f3;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                font-family: 'Poppins', sans-serif;
+                margin: 0 20px;
+            }
+
+            body>noscript {
+                display: block;
+                background-color: white;
+                padding: 20px;
+                border-radius: 10px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            }
+
+            body>noscript>h1 {
+                font-size: 1.5rem;
+                margin-bottom: 10px;
+            }
+
+            body>noscript>p {
+                font-size: 1rem;
+                margin-bottom: 10px;
+            }
+
+            body>noscript>a {
+                font-size: 1rem;
+                color: #007bff;
+                text-decoration: none;
+            }
+        </style>
+        <h1>JavaScript no está habilitado</h1>
+        <p>Para poder visualizar la página correctamente, habilita JavaScript en la configuración de tu navegador.</p>
+        <a href="https://www.enable-javascript.com/es/" target="_blank">Aprende cómo habilitar JavaScript</a>
+    </noscript>
 </body>
 
 </html>

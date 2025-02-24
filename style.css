@@ -139,24 +139,40 @@ a {
     color: rgb(109, 10, 190);
 }
 
+/* Estilos del Blog */
+
 #img-web {
     border-radius: 10px;
     border: 10px solid blueviolet;
     width: 50vw;
 }
 
+/* Estilos de la Trivia */
+
 #start-button, #trivia-buttons button {
-    background-color: blueviolet;
     border-style: none;
-    box-shadow: 1px 3px 5px rgb(92, 9, 160);
     color: white;
     width: 30%;
     padding: 10px 20px;
     border-radius: 5px;
 }
 
-#start-button:hover, #answers button:hover, #trivia-buttons button:hover {
+#start-button{
+    background-color: blueviolet;
+    box-shadow: 1px 3px 5px rgb(92, 9, 160);
+}
+
+#trivia-buttons button {
+    background-color: #007bff;
+    box-shadow: 1px 3px 5px rgb(9, 49, 160);
+}
+
+#start-button:hover, #answers button:hover {
     background-color: rgb(109, 10, 190);
+    cursor: pointer;
+}
+#trivia-buttons button:hover {
+    background-color: #0044ff;
     cursor: pointer;
 }
 
@@ -189,7 +205,7 @@ a {
     margin-top: 20px;
 }
 
-/* Para ocultar Trivia, resultados y seccion principal*/
+/* Para ocultar Trivia, resultados y seccion principal */
 .hidden {
     display: none;
 }

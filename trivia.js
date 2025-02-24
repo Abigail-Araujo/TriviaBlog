@@ -95,16 +95,18 @@ const questions = [
 
 //Codigo de la trivia
 
-const start = document.getElementById("start-button");
-
+//contador de respuestas correctas e indice de pregunta
 let correctAnswers = 0;
 let indexQuestion = 0;
 
+//Evento para iniciar la trivia
+const start = document.getElementById("start-button");
 start.onclick = () => {
   showTrivia();
   trivia();
 };
 
+//Funcion para mostrar la trivia y ocultar el contenido principal (Blog)
 const showTrivia = () => {
   const main = document.getElementById("main-content");
   main.classList.add("hidden");
@@ -112,6 +114,7 @@ const showTrivia = () => {
   triviaContent.classList.remove("hidden");
 };
 
+//Funcion para mostrar las preguntas y respuestas
 const trivia = () => {
   let questionTitle = document.getElementById("question-title");
   let answers = document.querySelectorAll(".answer");
@@ -133,6 +136,7 @@ const trivia = () => {
   });
 };
 
+//Funcion para mostrar los resultados
 const showResults = () => {
   const trivia = document.getElementById("trivia");
   trivia.classList.add("hidden");
@@ -143,8 +147,8 @@ const showResults = () => {
   score.innerText = `${correctAnswers}/${questions.length}`;
 };
 
+//Evento para reiniciar la trivia
 const restart = document.getElementById("restart");
-
 restart.onclick = () => {
   if (indexQuestion === questions.length) {
     const results = document.getElementById("results");
@@ -157,8 +161,8 @@ restart.onclick = () => {
   trivia();
 };
 
+//Evento para volver al inicio
 const back = document.getElementById("home");
-
 back.onclick = () => {
   if (indexQuestion === questions.length) {
     const results = document.getElementById("results");
