@@ -111,6 +111,14 @@ h1,
 }
 
 /* Estilos generales */
+html{
+    font-size: 18px;
+}
+
+button{
+    font-size: 1rem;
+}
+
 body {
     background-color: #9d75eb;
     text-align: center;
@@ -125,7 +133,7 @@ body {
 
 #container {
     box-shadow: 2px 2px 30px blueviolet;
-    width: 80%;
+    max-width: 80%;
     background: #f3eefc;
     margin: auto;
     border-radius: 20px;
@@ -186,7 +194,12 @@ a {
     border: solid 2px blueviolet;
     border-radius: 10px;
     padding: 20px 10px 40px 10px;
-}	
+}
+
+#question-title, #results-title{
+    width: 900px;
+    max-width: 100%;
+}
 
 #answers{
     display: flex;
@@ -194,8 +207,10 @@ a {
 }
 
 #answers button {
+    width: 900px;
+    max-width: 100%;
     margin: 10px 0px;
-    padding: 20px;
+    padding: 20px 40px;
     border-radius: 10px;
     background-color: blueviolet;
     border-style: none;
@@ -224,12 +239,12 @@ a {
         width: 70%;
     }
     #start-button, #trivia-buttons button {
-        width: 90%;
+        width: 100%;
     }
     #trivia-buttons {
         display: block;
     }
     #trivia-buttons button {
-        margin: 10px;
+        margin: 10px 0px;
     }
 }
