@@ -114,7 +114,7 @@ const showTrivia = () => {
   triviaContent.classList.remove("hidden");
 };
 
-//Funcion para ocultar correcion y mostrar trivia
+//Funcion para ocultar trivia y mostrar corrección
 const showCorrection = () => {
   let correctionContainer = document.getElementById("correction-container");
   let trivia = document.getElementById("trivia");
@@ -122,7 +122,7 @@ const showCorrection = () => {
   trivia.classList.add("hidden");
   correctionContainer.classList.remove("hidden");
 };
-
+//Funcion para ocultar corrección y mostrar trivia
 const hiddenCorrection = () => {
   let correctionContainer = document.getElementById("correction-container");
   let trivia = document.getElementById("trivia");
