@@ -118,6 +118,9 @@ const showTrivia = () => {
 const trivia = () => {
   let questionTitle = document.getElementById("question-title");
   let answers = document.querySelectorAll(".answer");
+  let questionNumber = document.getElementById("question-number");
+
+  questionNumber.innerText = `Pregunta ${indexQuestion + 1} de ${questions.length}`;
 
   let question = questions[indexQuestion];
   questionTitle.innerText = question.question;
