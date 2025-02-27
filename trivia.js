@@ -114,13 +114,34 @@ const showTrivia = () => {
   triviaContent.classList.remove("hidden");
 };
 
+//Funcion para ocultar correcion y mostrar trivia
+const showCorrection = () => {
+  let correctionContainer = document.getElementById("correction-container");
+  let trivia = document.getElementById("trivia");
+
+  trivia.classList.add("hidden");
+  correctionContainer.classList.remove("hidden");
+};
+
+const hiddenCorrection = () => {
+  let correctionContainer = document.getElementById("correction-container");
+  let trivia = document.getElementById("trivia");
+
+  correctionContainer.classList.add("hidden");
+  trivia.classList.remove("hidden");
+}
+
 //Funcion para mostrar las preguntas y respuestas
 const trivia = () => {
   let questionTitle = document.getElementById("question-title");
   let answers = document.querySelectorAll(".answer");
   let questionNumber = document.getElementById("question-number");
+  let correction = document.getElementById("correction");
+  let emoji = document.getElementById("emoji");
 
-  questionNumber.innerText = `Pregunta ${indexQuestion + 1} de ${questions.length}`;
+  questionNumber.innerText = `Pregunta ${indexQuestion + 1} de ${
+    questions.length
+  }`;
 
   let question = questions[indexQuestion];
   questionTitle.innerText = question.question;
@@ -128,12 +149,21 @@ const trivia = () => {
   answers.forEach((answer, index) => {
     answer.innerText = question.answers[index].description;
     answer.onclick = () => {
-      correctAnswers += question.answers[index].value;
+      if (question.answers[index].value === 1) {
+        correctAnswers += 1;
+        correction.innerText = "¡Correcto!";
+        emoji.innerText = "🎉";
+      } else {
+        correction.innerText = "¡Incorrecto!";
+        emoji.innerText = "😢";
+      }
+      showCorrection();
+      setTimeout(hiddenCorrection, 2000);
       indexQuestion++;
       if (indexQuestion < questions.length) {
         trivia();
       } else {
-        showResults();
+        setTimeout(showResults, 2000);
       }
     };
   });
@@ -179,4 +209,4 @@ back.onclick = () => {
   main.classList.remove("hidden");
   correctAnswers = 0;
   indexQuestion = 0;
-}
+};

@@ -23,14 +23,16 @@ p,
     font-weight: 400;
     font-style: normal;
 }
-button, 
+
+button,
 .poppins-medium {
     font-family: "Poppins", sans-serif;
     font-weight: 500;
     font-style: normal;
 }
 
-a, h2,
+a,
+h2,
 .poppins-semibold {
     font-family: "Poppins", sans-serif;
     font-weight: 600;
@@ -111,11 +113,11 @@ h1,
 }
 
 /* Estilos generales */
-html{
+html {
     font-size: 18px;
 }
 
-button{
+button {
     font-size: 1rem;
 }
 
@@ -140,7 +142,8 @@ body {
     padding: 20px 30px 30px 30px;
 }
 
-h1, h2 {
+h1,
+h2 {
     color: blueviolet;
 }
 
@@ -162,7 +165,8 @@ a {
 
 /* Estilos de la Trivia */
 
-#start-button, #trivia-buttons button {
+#start-button,
+#trivia-buttons button {
     border-style: none;
     color: white;
     width: 30%;
@@ -170,7 +174,7 @@ a {
     border-radius: 5px;
 }
 
-#start-button{
+#start-button {
     background-color: blueviolet;
     box-shadow: 1px 3px 5px rgb(92, 9, 160);
 }
@@ -180,10 +184,12 @@ a {
     box-shadow: 1px 3px 5px rgb(9, 49, 160);
 }
 
-#start-button:hover, #answers button:hover {
+#start-button:hover,
+#answers button:hover {
     background-color: rgb(109, 10, 190);
     cursor: pointer;
 }
+
 #trivia-buttons button:hover {
     background-color: #0044ff;
     cursor: pointer;
@@ -196,12 +202,14 @@ a {
     padding: 20px 10px 40px 10px;
 }
 
-#question-title, #results-title{
+#question-title,
+#results-title,
+#correction {
     width: 900px;
     max-width: 100%;
 }
 
-#answers{
+#answers {
     display: flex;
     flex-direction: column;
 }
@@ -225,6 +233,16 @@ a {
     margin-top: 20px;
 }
 
+#emoji {
+    margin: 30px 0px;
+    font-size: 8rem;
+}
+
+#score {
+    font-size: 4rem;
+    margin: 40px 0px;
+}
+
 /* Para ocultar Trivia, resultados y seccion principal */
 .hidden {
     display: none;
@@ -235,15 +253,20 @@ a {
     #img-web {
         width: 90%;
     }
+
     #container {
         width: 70%;
     }
-    #start-button, #trivia-buttons button {
+
+    #start-button,
+    #trivia-buttons button {
         width: 100%;
     }
+
     #trivia-buttons {
         display: block;
     }
+
     #trivia-buttons button {
         margin: 10px 0px;
     }
