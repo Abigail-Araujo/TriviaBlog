@@ -162,12 +162,12 @@ const trivia = () => {
         emoji.innerText = "😢";
       }
       showCorrection();
-      setTimeout(hiddenCorrection, 2000);
+      setTimeout(hiddenCorrection, 1500);
       indexQuestion++;
       if (indexQuestion < questions.length) {
         trivia();
       } else {
-        setTimeout(showResults, 2000);
+        setTimeout(showResults, 1500);
       }
     };
   });
