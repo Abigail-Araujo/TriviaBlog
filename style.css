@@ -142,6 +142,10 @@ body {
     padding: 20px 30px 30px 30px;
 }
 
+h1{
+    font-size: 2rem;
+}
+
 h1,
 h2 {
     color: blueviolet;
@@ -226,6 +230,10 @@ a {
     box-shadow: 1px 3px 5px rgb(92, 9, 160);
 }
 
+#question-number {
+    margin-top: -10px;
+}
+
 #trivia-buttons {
     display: flex;
     gap: 20px;
@@ -245,7 +253,7 @@ a {
 
 /* Para ocultar Trivia, resultados y seccion principal */
 .hidden {
-    display: none;
+    display: none !important;
 }
 
 /* Estilos responsive */

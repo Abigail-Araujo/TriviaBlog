@@ -118,17 +118,21 @@ const showTrivia = () => {
 const showCorrection = () => {
   let correctionContainer = document.getElementById("correction-container");
   let trivia = document.getElementById("trivia");
+  let buttons = document.getElementById("trivia-buttons");
 
   trivia.classList.add("hidden");
+  buttons.classList.add("hidden");
   correctionContainer.classList.remove("hidden");
 };
 //Funcion para ocultar corrección y mostrar trivia
 const hiddenCorrection = () => {
   let correctionContainer = document.getElementById("correction-container");
   let trivia = document.getElementById("trivia");
+  let buttons = document.getElementById("trivia-buttons");
 
   correctionContainer.classList.add("hidden");
   trivia.classList.remove("hidden");
+  buttons.classList.remove("hidden");
 }
 
 //Funcion para mostrar las preguntas y respuestas
