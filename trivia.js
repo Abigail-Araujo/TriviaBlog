@@ -186,7 +186,7 @@ const showResults = () => {
 
 //Evento para reiniciar la trivia
 const restart = document.getElementById("restart");
-restart.onclick = () => {
+restart.addEventListener("click", () => {
   if (indexQuestion === questions.length) {
     const results = document.getElementById("results");
     results.classList.add("hidden");
@@ -196,11 +196,11 @@ restart.onclick = () => {
   correctAnswers = 0;
   indexQuestion = 0;
   trivia();
-};
+});
 
 //Evento para volver al inicio
 const back = document.getElementById("home");
-back.onclick = () => {
+back.addEventListener("click", () => {
   if (indexQuestion === questions.length) {
     const results = document.getElementById("results");
     results.classList.add("hidden");
@@ -213,4 +213,4 @@ back.onclick = () => {
   main.classList.remove("hidden");
   correctAnswers = 0;
   indexQuestion = 0;
-};
+});
