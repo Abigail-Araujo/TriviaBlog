@@ -133,7 +133,9 @@ const hiddenCorrection = () => {
   correctionContainer.classList.add("hidden");
   trivia.classList.remove("hidden");
   buttons.classList.remove("hidden");
-}
+};
+
+let eventListenersAdded = false;
 
 //Funcion para mostrar las preguntas y respuestas
 const trivia = () => {
@@ -152,25 +154,29 @@ const trivia = () => {
 
   answers.forEach((answer, index) => {
     answer.innerText = question.answers[index].description;
-    answer.onclick = () => {
-      if (question.answers[index].value === 1) {
-        correctAnswers += 1;
-        correction.innerText = "¡Correcto!";
-        emoji.innerText = "🎉";
-      } else {
-        correction.innerText = "¡Incorrecto!";
-        emoji.innerText = "😢";
-      }
-      showCorrection();
-      setTimeout(hiddenCorrection, 1500);
-      indexQuestion++;
-      if (indexQuestion < questions.length) {
-        trivia();
-      } else {
-        setTimeout(showResults, 1500);
-      }
-    };
+    if (!eventListenersAdded) {
+      answer.addEventListener("click", () => {
+        let question = questions[indexQuestion];
+        if (question.answers[index].value === 1) {
+          correctAnswers += 1;
+          correction.innerText = "¡Correcto!";
+          emoji.innerText = "🎉";
+        } else {
+          correction.innerText = "¡Incorrecto!";
+          emoji.innerText = "😢";
+        }
+        showCorrection();
+        setTimeout(hiddenCorrection, 1500);
+        indexQuestion++;
+        if (indexQuestion < questions.length) {
+          trivia();
+        } else {
+          setTimeout(showResults, 1500);
+        }
+      });
+    }
   });
+  eventListenersAdded = true;
 };
 
 //Funcion para mostrar los resultados
